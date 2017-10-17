@@ -3,7 +3,7 @@ import io
 import subprocess
 import pyautogui
 from time import sleep
-from enum import IntEnum    #for VerbosePriority
+from enum import IntEnum
 
 ###########################################################################################################################################
 # Priority definitions for output
