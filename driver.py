@@ -182,12 +182,84 @@ def manageDevice(ch):
             serialReceiver.write(b'x')
         except:
             pass
-    if ch == 'x':
+'''
+#####################
+        ^
+  ._   /|\   _.
+  |\    |    /|
+    7   8   9
+
+<-- 4       6 -->
+
+    1   2   3
+  |/    |   _\|
+        |
+
+#####################
+'''
+    if ch == '1':
         try:
             x, y = pyautogui.position()
-            pyautogui.moveTo(min(width,x),min(height,y))
+            pyautogui.moveTo(max(width,x-1),max(height,y+1))
             consolePrint(msg, Priority.GUI)
-            serialReceiver.write(b'x')
+            serialReceiver.write(b'1')
+        except:
+            pass
+    if ch == '2':
+        try:
+            x, y = pyautogui.position()
+            pyautogui.moveTo(max(width,x),max(height,y+1))
+            consolePrint(msg, Priority.GUI)
+            serialReceiver.write(b'2')
+        except:
+            pass
+    if ch == '3':
+        try:
+            x, y = pyautogui.position()
+            pyautogui.moveTo(max(width,x+1),max(height,y+1))
+            consolePrint(msg, Priority.GUI)
+            serialReceiver.write(b'3')
+        except:
+            pass
+    if ch == '4':
+        try:
+            x, y = pyautogui.position()
+            pyautogui.moveTo(max(width,x-1),max(height,y))
+            consolePrint(msg, Priority.GUI)
+            serialReceiver.write(b'4')
+        except:
+            pass
+    # move right
+    if ch == '6':
+        try:
+            x, y = pyautogui.position()
+            pyautogui.moveTo(max(width,x+1),max(height,y))
+            consolePrint(msg, Priority.GUI)
+            serialReceiver.write(b'6')
+        except:
+            pass
+    if ch == '7':
+        try:
+            x, y = pyautogui.position()
+            pyautogui.moveTo(max(width,x-1),max(height,y-1))
+            consolePrint(msg, Priority.GUI)
+            serialReceiver.write(b'7')
+        except:
+            pass
+    if ch == '8':
+        try:
+            x, y = pyautogui.position()
+            pyautogui.moveTo(max(width,x),max(height,y-1))
+            consolePrint(msg, Priority.GUI)
+            serialReceiver.write(b'8')
+        except:
+            pass
+    if ch == '9':
+        try:
+            x, y = pyautogui.position()
+            pyautogui.moveTo(max(width,x+1),max(height,y-1))
+            consolePrint(msg, Priority.GUI)
+            serialReceiver.write(b'9')
         except:
             pass
     if ch == 'I':

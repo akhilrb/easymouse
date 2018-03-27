@@ -13,7 +13,7 @@ A Python script manages the inputs received from the wearable.<br>
 * Automatically reconnects on byte mismatch due to Serial Error
 * Requests port reconfiguration if UDE is encountered
 * Optionally configurable verbose output
-
+* Color-coded console output
 
 ## Wearable
 
@@ -23,5 +23,4 @@ Custom buttons provide quick functions, which can be edited in the driver.<br>
 
 ## To-Do
 
-* Color-coded console output
 * Implement curses
